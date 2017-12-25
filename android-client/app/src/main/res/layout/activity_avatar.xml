@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_avatar"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="ch.epfl.sweng.project.EditAvatar"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/avatarFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_above="@+id/selectMode"
+        android:clipChildren="false"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/blank_text_for_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="1dp" />
+
+        <ImageView
+            android:id="@+id/skinImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/boy_skin_light"
+            android:contentDescription="@string/image_of_the_skin_of_the_avatar"
+            android:adjustViewBounds="false" />
+
+        <ImageView
+            android:id="@+id/eyesImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_of_the_eyes_of_the_avatar"
+            app:srcCompat="@drawable/boy_eyes_blue" />
+
+        <ImageView
+            android:id="@+id/baseImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/boy_skin_base"
+            android:contentDescription="@string/base_image_for_the_avatar"
+            />
+
+        <ImageView
+            android:id="@+id/shirtImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/boy_shirt_style1"
+            android:contentDescription="@string/image_of_the_shirt_of_the_avatar"
+            />
+
+        <ImageView
+            android:id="@+id/hairImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/boy_hair_style1_blond"
+            android:contentDescription="@string/image_of_the_hair_of_the_avatar"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/selectMode"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_gravity="bottom|center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp">
+
+
+        <View
+            style="@style/Divider"
+            android:id="@+id/divider" />
+
+        <TextView
+            android:id="@+id/chooseAvatarTitle"
+            android:text="@string/create_your_own_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black_color"
+            android:layout_marginBottom="5dp"
+            android:background="@color/drawerPane"
+            android:padding="1dp" />
+
+        <LinearLayout
+                android:id="@+id/modePalette"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/skin"
+                    android:text="@string/skin"
+                    android:onClick="chooseSkinTone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    style="@style/Widget.AppCompat.Button.Colored" />
+
+                <Button
+                    android:id="@+id/eyes"
+                    android:text="@string/eyes"
+                    android:onClick="chooseEyeColor"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    style="@style/Widget.AppCompat.Button.Colored" />
+
+                <Button
+                    android:id="@+id/hairColor"
+                    android:text="@string/hair"
+                    android:onClick="chooseHairColor"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif"
+                    style="@style/Widget.AppCompat.Button.Colored" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tipLayout"
+        android:visibility="gone"
+        android:alpha="1"
+        android:background="#D3000000"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:text="@string/tip_swipe_avatar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:padding="20dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="cursive"
+                android:textStyle="normal|bold"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/include_progress_overlay"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+    <include layout="@layout/include_network_status"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+</RelativeLayout>

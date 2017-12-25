@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">PolyLove</string>
+
+    <string name="welcome">Log in with Tequila</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="loginButton">Log in</string>
+    <string name="title_activity_basic_chat" translatable="false">Chat room</string>
+    <string name="apropos">About you…</string>
+    <string name="gender">Your gender</string>
+    <string name="genderInput">You are a</string>
+    <string name="genderInterest_input">You\'re into</string>
+    <string name="your_hobbies">Your hobbies</string>
+    <string name="short_description">A short description</string>
+    <string name="your_languages">Your languages</string>
+    <string name="age">Preferred age</string>
+    <string name="next">Next</string>
+    <string name="settings">Settings</string>
+    <string name="french">French</string>
+    <string name="english">English</string>
+    <string name="notifications">Notifications</string>
+    <string name="language">Language</string>
+    <string name="Oops" translatable="false">Oooops…</string>
+    <string name="interError">We need to know your hobbies to match you to your future lover &lt;3</string>
+    <string name="langError">Sure you can\'t speak any language ?</string>
+    <string name="saved_infos">Information saved !</string>
+    <string name="select_which_part_you_want_to_modify">Select which part you want to modify</string>
+    <string name="save">Save</string>
+    <string name="saved_pref_firebaseId" translatable="false">firebaseToken</string>
+    <string name="hair">Hair</string>
+    <string name="eyes">Eyes</string>
+    <string name="skin">Skin</string>
+    <string name="my_birthday">Your birthday</string>
+    <string name="choose">Choose…</string>
+    <string name="confirm_deletion_item">Are you sure you want to delete this item ?</string>
+    <string name="longClickToRemoveItems">Tap and hold to remove an item</string>
+    <string name="update">Update</string>
+    <string name="disabled_back_button_msg">You can\'t go back at this point</string>
+    <string name="choose_skintone">Choose the skin tone</string>
+    <string name="choose_eye_color">Choose the eye color</string>
+    <string name="choose_hair_color">Choose the hair color</string>
+
+    // Avatar
+    <string-array name="skinTone">
+        <item>Dark</item>
+        <item>Medium</item>
+        <item>Light</item>
+    </string-array>
+
+    <string-array name="hair">
+        <item>Hair</item>
+        <item>Eyes</item>
+        <item>Skin</item>
+    </string-array>
+
+    <string-array name="eyeColor">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Brown</item>
+    </string-array>
+
+    <string-array name="hairColor">
+        <item>Blond</item>
+        <item>Brown</item>
+        <item>Black</item>
+        <item>Ginger</item>
+    </string-array>
+    <string name="title_activity_log" translatable="false">logActivity</string>
+    <string name="message">Message</string>
+    <string name="editProfile">Edit profile</string>
+    <string name="editProfilDesc">Edit your own profile</string>
+    <string name="editAvatar">Edit avatar</string>
+    <string name="editAvatarDesc">Set your avatar at your image</string>
+    <string name="preferences">Preferences</string>
+    <string name="preferenceDesc">Set your settings</string>
+    <string name="write_to_your_match">Don\'t be shy, write to your match</string>
+    <string name="swipe_open">Open slide menu</string>
+    <string name="swipe_close">Close slide menu</string>
+    <string name="view_profile">View Profile</string>
+    <string name="my_profile">My profile</string>
+    <string name="icon_of_the_content" translatable="false">icon of the content</string>
+    <string name="button_to_say_i_m_ready_for_a_match" translatable="false">Button to say \'I\'m ready for a match</string>
+    <string name="logo_of_the_application" translatable="false">Logo of the application</string>
+    <string name="image_of_the_eyes_of_the_avatar" translatable="false">image of the eyes of the avatar</string>
+    <string name="image_of_the_skin_of_the_avatar" translatable="false">image of the skin of the avatar</string>
+    <string name="base_image_for_the_avatar" translatable="false">base image for the avatar</string>
+    <string name="image_of_the_shirt_of_the_avatar" translatable="false">image of the shirt of the avatar</string>
+    <string name="image_of_the_hair_of_the_avatar" translatable="false">image of the hair of the avatar</string>
+    <string name="your_avatar">Your Avatar</string>
+    <string name="hi_new_message">Hi! new message</string>
+    <string name="create_your_own_avatar">Create your own Avatar !</string>
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="last_message">Last message</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="ready">Ready ?</string>
+    <string name="title_activity_drawer" translatable="false">DrawerActivity</string>
+    <string name="delete">Delete</string>
+    <string name="copy">Copy</string>
+    <string name="letsMatch">Propose me someone</string>
+    <string name="copied_to_clipboard">Message copied into clipboard</string>
+    <string name="tip_swipe_avatar">Swipe left and right to choose your haircut and your clothes !</string>
+    <string name="section_ar">Architecture</string>
+    <string name="section_gc">Génie civil</string>
+    <string name="section_sie">Environnement</string>
+    <string name="section_cgc">Chimie</string>
+    <string name="section_ma">Mathématiques</string>
+    <string name="section_ph">Physique</string>
+    <string name="section_el"><![CDATA[Electrique & Electronique]]></string>
+    <string name="section_gm">Génie mécanique</string>
+    <string name="section_mx">Matériaux</string>
+    <string name="section_mt">Michrotechnique</string>
+    <string name="section_in">Informatique</string>
+    <string name="section_sc">Systèmes de communication</string>
+    <string name="section_stv">Sciences et technologies du vivant</string>
+    <string name="section_cms">CMS</string>
+    <string name="from_camera">From camera</string>
+    <string name="from_gallery">From gallery</string>
+    <string name="delete_photo">Delete photo</string>
+    <string name="unauthorized">Unauthorized</string>
+    <string name="authentication_error_msg">You must be authenticated to perform this operation</string>
+    <string name="connection_error_title">Connexion error</string>
+    <string name="server_response">Server response code</string>
+    <string name="hobbies_error_msg">Your hobby must have more than 2 characters</string>
+    <string name="network_unavailable">Network unavailable</string>
+    <string name="network_error">Network Error</string>
+    <string name="network_error_message">An unexpected error has occurred. Try again later. Sorry for the inconvenience.</string>
+    <string name="section">Section</string>
+    <string name="description">Description</string>
+    <string name="languages_spoken">Languages spoken</string>
+    <string name="birthday">Birthday</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="crop_not_supported" translatable="false">Your device doesn\'t support the crop action!</string>
+    <string name="capturing_not_supported">Your device doesn\'t support capturing images!</string>
+    <string name="gallery_not_supported" translatable="false">Your device doesn\'t support gallery images!</string>
+    <string name="username">Username</string>
+    <string name="big_heart" translatable="false">Big heart</string>
+    <string name="plus_sign" translatable="false">+</string>
+    <string name="tap_circle_for_photo">Tap on the circle to select a profile photo</string>
+    <string name="time_midnight" translatable="false">00:00:00</string>
+    <string name="confirm">Confirm</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="saving">Saving</string>
+    <string name="todays_match">Today\'s match</string>
+    <string name="error_user_insertion">Error while creating user</string>
+    <string name="stay_connected">Keep me logged in</string>
+    <string name="general">General</string>
+    <string name="stay_connected_summaryOn">No need to be re-logged each time</string>
+    <string name="stay_connected_summaryOff">You will have to re-logged each time</string>
+    <string name="notif_title_default" translatable="false">PolyLove</string>
+    <string name="notif_content_default">New notification</string>
+    <string name="notif_title_new_match">Daily proposal is available</string>
+    <string name="notif_content_new_match">Your daily proposal is waiting for you :) Let\'s go send him a message</string>
+    <string name="notif_title_new_message">New message</string>
+    <string name="notif_content_new_message">Someone sent you a new message</string>
+    <string name="notif_title_match_confirmation">New match !</string>
+    <string name="notif_content_match_confirmation">Your daily proposal matched with you ! You can now see his/her identity and consult his/her complete profile</string>
+    <string name="waiting_for_network">Waiting for network…</string>
+    <string name="image_of_the_avatar" translatable="false">image of the avatar</string>
+    <string name="close">Close</string>
+    <string name="like_is_canceled">Your like is canceled !</string>
+    <string name="liked_this_person">You like this person !</string>
+</resources>

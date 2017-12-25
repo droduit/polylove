@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "909174588580",
+    "firebase_url": "https://polylove-c4483.firebaseio.com",
+    "project_id": "polylove-c4483",
+    "storage_bucket": "polylove-c4483.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909174588580:android:3d283d7b9bf3b490",
+        "android_client_info": {
+          "package_name": "ch.epfl.sweng.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909174588580-vsa7mfp87d3rjcfbfoi0fnio35id77d3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.project",
+            "certificate_hash": "96E587F295E04F8B61F57F3A8C377B82058C7351"
+          }
+        },
+        {
+          "client_id": "909174588580-np1hill2o79kcilrqhfth2g0a72ltqmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmc_h5N2q5bKxgTAAy85kTzlnv8Ny8uVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909174588580-np1hill2o79kcilrqhfth2g0a72ltqmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

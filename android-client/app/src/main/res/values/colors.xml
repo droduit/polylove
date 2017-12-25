@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ec407a</color>
+
+    // User colors
+    <color name="light">#ffffff</color>
+    <color name="text">#555555</color>
+    <color name="white">#ffffff</color>
+    <color name="primary_text_material_light">#f6000000</color>
+
+    // Skin colors (currently unused)
+    <!--<color name="asian">#E7ED9F</color>
+    <color name="black">#A0751B</color>
+    <color name="caucasian">#FFCB99</color>-->
+
+    <color name="black_color">#333333</color>
+    <color name="lightGray">#f6f6f6</color>
+    <color name="titleBackground">#eeeeee</color>
+    <color name="divider">#bbbbbb</color>
+    <color name="mainRibbon">#f99be3</color>
+    <color name="menuRibbon">#2c3e50</color>
+    <color name="drawerPane">#ecf0f1</color>
+    <color name="icon_grey">#666666</color>
+    <color name="icons_color">#666666</color>
+    <color name="orange">#fcb232</color>
+    <color name="todayMatchRow">#fef4fd</color>
+    <color name="todayMatchName">#6a0225</color>
+    <color name="pure_black">#FF000000</color>
+
+</resources>

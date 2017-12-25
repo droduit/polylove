@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+apply plugin: 'jacoco'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "ch.epfl.sweng.project"
+        minSdkVersion 15
+        targetSdkVersion 25
+
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    lintOptions {
+        // Disable lint warnings about app indexing, and about non-latest tools versions
+        // TODO consider re-enabling app indexing before publishing your application.
+        disable 'GoogleAppIndexingWarning', 'GradleDependency'
+    }
+
+    // Workaround for an Android Studio bug in the "Missing Return Statement" warning
+    return void
+}
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url 'http://lorenzo.villani.me/android-cropimage/'
+    }
+}
+
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
+        exclude module: 'support-annotations'
+        exclude module: 'support-v4'
+        exclude module: 'support-v13'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'design'
+    }
+
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    androidTestCompile 'junit:junit:4.12'
+    compile 'com.google.firebase:firebase-core:9.8.0'
+    compile 'com.google.firebase:firebase-messaging:9.8.0'
+    compile 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'me.villani.lorenzo.android:android-cropimage:1.1.+'
+}
+
+// Do not change the below code unless you're sure you know what you're doing
+// Also make sure Jenkins config is synced with this one.
+
+jacoco {
+    toolVersion = "0.7.7.201606060606"
+}
+
+task jacocoReport(type: JacocoReport, dependsOn: "connectedAndroidTest") {
+    sourceDirectories = files(['**/src/main/java'])
+
+    classDirectories = fileTree(
+            dir: '**/classes',
+            excludes: [
+                    '**/network/PersistantCookieStore.class',
+                    '**/R.class',
+                    '**/R$*.class',
+                    '**/BuildConfig.*',
+                    '**/Manifest*.*',
+                    '**/*Test*.*',
+                    '**/android/**/*.*'
+            ]
+    )
+
+}
+
+apply plugin: 'com.google.gms.google-services'

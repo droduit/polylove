@@ -1,0 +1,39 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progress_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/black"
+    android:clickable="true"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:text="@string/saving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="14dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout>

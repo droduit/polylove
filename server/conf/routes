@@ -1,0 +1,40 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+POST    /api/match/:matchId/message             controllers.MessageController.store(matchId: Long)
+GET     /api/match/:matchId/messages/:fromDate  controllers.MessageController.fetch(matchId: Long, fromDate: Long)
+
+POST    /api/login                  controllers.UserController.login
+POST    /api/user/firebaseId        controllers.UserController.storeFirebaseId
+
+POST    /api/user/profile           controllers.ProfileController.store
+GET     /api/user/:userId/profile   controllers.ProfileController.fetch(userId: Long)
+
+POST    /api/user/picture           controllers.PictureController.store
+GET     /api/user/picture           controllers.PictureController.fetchOwn
+GET     /api/user/:userId/picture   controllers.PictureController.fetch(userId: Long)
+
+POST    /api/user/avatar            controllers.AvatarController.store
+GET     /api/user/:userId/avatar    controllers.AvatarController.fetch(userId: Long)
+
+POST    /api/match/:matchId/interested          controllers.MatchController.validateMatch(matchId: Long)
+GET     /api/user/matches                       controllers.MatchController.fetchMatches
+
+# MUST BE LAST
+GET     /api/user/:userId           controllers.UserController.fetch(userId: Long)
+
+# Admin interface
+GET     /admin/nuke                 controllers.AdminController.nuke
+
+GET     /admin/users                controllers.AdminController.fetchUsers
+POST    /admin/users                controllers.AdminController.storeUsers
+
+GET     /admin/matches              controllers.AdminController.fetchMatches
+POST    /admin/matches              controllers.AdminController.storeMatches
+
+POST    /admin/messages             controllers.AdminController.storeMessages
+
+POST    /admin/matches/open         controllers.AdminController.openMatches
+POST    /admin/matches/close        controllers.AdminController.closeMatches
+GET     /admin/matches/reveal       controllers.AdminController.reveal

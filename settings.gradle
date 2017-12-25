@@ -1,0 +1,2 @@
+include ':android-client'
+include ':android-client:app'

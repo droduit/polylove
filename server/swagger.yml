@@ -1,0 +1,186 @@
+---
+swagger: "2.0"
+info:
+  title: PolyLove
+  description: |
+    The PolyLove dating app API.
+  version: "0.1"
+
+host: localhost:9000
+basePath: /api
+schemes: [ 'http', 'https' ]
+
+consumes: [ 'text/json' ]
+produces: [ 'text/json' ]
+
+responses:
+  GeneralError:
+    description: Missing informations or ill formed request
+    schema:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          type: string
+        error:
+          type: string
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: object
+              required:
+                - msg
+              properties:
+                msg:
+                  type: array
+                  items:
+                    type: string
+                args:
+                  type: array
+                  items:
+                    type: string
+
+  BadRequest:
+    description: Missing informations or ill formed request
+    schema:
+      type: string
+
+securityDefinitions:
+  token:
+    type: apiKey
+    name: Authorization
+    in: header
+
+definitions:
+  Avatar:
+    type: object
+    required:
+      - hairs
+      - eyes
+      - skin
+    properties:
+      hairs:
+        type: string
+        enum: [ 'Blond', 'Brown', 'Black', 'Ginger' ]
+      eyes:
+        type: string
+        enum: [ 'Blue', 'Green', 'Brown', 'Gray', 'Hazelnut' ]
+      skin:
+        type: string
+        enum: [ 'Black', 'Caucasian', 'Asian' ]
+  Profile:
+    type: object
+    required:
+      - gender
+      - birthday
+      - languages
+      - interests
+      - description
+      - genderInterest
+      - ageInterest
+    properties:
+      gender:
+        type: string
+        enum: [ 'Male', 'Female', 'Other' ]
+      birthday:
+        type: string
+        format: date
+      languages:
+        type: array
+        items:
+          type: string
+          enum: [ 'French', 'English' ]
+      interests:
+        type: array
+        items:
+          type: string
+      description:
+        type: string
+      genderInterest:
+        type: string
+        enum: [ 'Male', 'Female', 'Both' ]
+      ageInterest:
+        type: object
+        required:
+          - start
+          - end
+        properties:
+          start:
+            type: integer
+            minimum: 18
+            maximum: 65
+          end:
+            type: integer
+            minimum: 18
+            maximum: 65
+
+paths:
+  /message/mirror:
+    post:
+      summary: Returns the given message reversed
+      consumes: [ 'text/plain; charset=utf-8' ]
+      produces: [ 'text/plain; charset=utf-8' ]
+      parameters:
+        - name: message
+          description: The message to reverse
+          in: body
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The given message reversed
+          schema:
+            type: string
+        '400':
+          $ref: '#/responses/BadRequest'
+
+  /messages:
+    get:
+      summary: Returns the list of posted messages
+      security:
+        - token: []
+      responses:
+        '200':
+          description: The list of all posted messages
+          schema:
+            type: array
+            items:
+              type: string
+
+  /user/profile:
+    post:
+      summary: Create or edit the user profile
+      parameters:
+        - name: profile
+          description: The content of the profile
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Profile'
+      responses:
+        '201':
+          description: Profile stored correctly
+          schema: {}
+        default:
+          $ref: '#/responses/GeneralError'
+
+  /user/avatar:
+    post:
+      summary: Create or edit the user avatar
+      parameters:
+        - name: avatar
+          description: The content of the avatar
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Avatar'
+      responses:
+        '201':
+          description: Avatar stored correctly
+          schema: {}
+        default:
+          $ref: '#/responses/GeneralError'

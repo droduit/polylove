@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/thumbPhoto"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="center"
+        app:riv_border_color="@color/colorAccent"
+        app:riv_border_width="7dip"
+        app:riv_corner_radius="30dip"
+        app:riv_mutate_background="false"
+        app:riv_oval="true"
+        app:srcCompat="@drawable/ic_local_see_black_24dp" />
+
+    <TextView
+        android:id="@+id/txtChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/tap_circle_for_photo" />
+
+</LinearLayout>

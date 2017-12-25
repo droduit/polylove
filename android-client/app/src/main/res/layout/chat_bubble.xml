@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bubble_layout_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/bubble_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bubble1"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp">
+
+        <TextView
+            android:id="@+id/textViewMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="18"
+            android:layout_gravity="center"
+            android:text="@string/hi_new_message"
+            android:textColor="@android:color/primary_text_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTime"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:gravity="end"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="12sp"
+            android:paddingTop="3dp"
+            android:minWidth="70px"
+            android:text="14:00" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/msg_clock"
+            android:id="@+id/ivStatus"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dp" />
+    </LinearLayout>
+
+</LinearLayout>

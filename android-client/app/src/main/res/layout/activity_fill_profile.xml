@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/whiteBackground">
+
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_camera"
+            android:layout_gravity="center"
+            android:name="ch.epfl.sweng.project.fragments.CameraFragment" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textViewSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section"
+            android:drawableLeft="@drawable/section_icon"
+            android:drawableStart="@drawable/section_icon"
+            android:theme="@style/title" />
+
+        <Button
+            android:id="@+id/btSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:text="@string/choose"
+            android:textAllCaps="false"
+            android:textStyle="normal|italic"
+            android:theme="@style/padding_20"
+            tools:targetApi="lollipop"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:background="?android:selectableItemBackground" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textView81"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/cake"
+            android:drawableStart="@drawable/cake"
+            android:text="@string/my_birthday"
+            android:theme="@style/title" />
+
+        <Button
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:text="@string/choose"
+            android:textAllCaps="false"
+            android:textStyle="normal|italic"
+            android:theme="@style/padding_20"
+            tools:targetApi="lollipop"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:background="?android:selectableItemBackground" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/soccer"
+            android:drawableStart="@drawable/soccer"
+            android:drawingCacheQuality="auto"
+            android:text="@string/your_hobbies"
+            android:theme="@style/title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/hobbies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:theme="@style/padding_20" />
+
+            <Button
+                android:id="@+id/btAddHobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:text="@string/plus_sign" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvDeleteItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/longClickToRemoveItems"
+            android:textSize="13sp"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/lvHobbies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:visibility="invisible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/information"
+            android:drawableStart="@drawable/information"
+            android:text="@string/short_description"
+            android:theme="@style/title" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:theme="@style/padding_20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textView82"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/flag_switzerland"
+            android:drawableStart="@drawable/flag_switzerland"
+            android:text="@string/your_languages"
+            android:theme="@style/title" />
+
+        <Button
+            android:id="@+id/languagesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:text="@string/choose"
+            android:textAllCaps="false"
+            android:textStyle="normal|italic"
+            tools:targetApi="lollipop"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="?android:selectableItemBackground" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/user"
+            android:drawableStart="@drawable/user"
+            android:text="@string/gender"
+            android:theme="@style/title" />
+
+        <Button
+            android:id="@+id/btGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:text="@string/choose"
+            android:textAllCaps="false"
+            android:textStyle="normal|italic"
+            android:theme="@style/padding_20"
+            tools:targetApi="lollipop"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:background="?android:selectableItemBackground" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/heart"
+            android:drawableStart="@drawable/heart"
+            android:text="@string/genderInterest_input"
+            android:theme="@style/title" />
+
+        <Button
+            android:id="@+id/btGenderInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:text="@string/choose"
+            android:textAllCaps="false"
+            android:textStyle="normal|italic"
+            android:theme="@style/padding_20"
+            tools:targetApi="lollipop"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:background="?android:selectableItemBackground" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/favourite"
+            android:drawableStart="@drawable/favourite"
+            android:text="@string/age"
+            android:theme="@style/title" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:id="@+id/ageInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="false"
+            android:theme="@style/padding_20" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/include_progress_overlay"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+    <include layout="@layout/include_network_status"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+</RelativeLayout>
+
+

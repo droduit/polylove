@@ -1,0 +1,68 @@
+@(content: Html)(implicit flash: Flash)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PolyLove admin's lair</title>
+        <style>
+            body {
+                width: 1024px;
+                margin: auto;
+                font-family: sans-serif;
+                color: #424242;
+            }
+
+            ul { padding: 0; }
+            li { display: inline; }
+
+            table { width: 100%; }
+            table, th, td {
+                border-collapse: collapse;
+                text-align: center;
+            }
+            th, td { padding: .4em 0; }
+            tbody tr { border-top: 1px #424242 solid; }
+            tbody tr:hover { background-color: #F8F8F8; }
+
+            .failure {
+                font-weight: bold;
+                color: #CC3333;
+            }
+
+            .success {
+                font-weight: bold;
+                color: #33CC66;
+            }
+
+            .nuke {
+                background-color: #CC3333;
+                color: #F8F8F8;
+                font-weight: bold;
+                padding: 1em;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Admin's lair</h1>
+
+        <p class="failure">
+            @flash.get("failure").getOrElse("")
+        </p>
+
+        <p class="success">
+            @flash.get("success").getOrElse("")
+        </p>
+
+        <p>
+            <a href="/admin/nuke" class="nuke">NUKE DATABASE</a>
+        </p>
+
+        <ul>
+            <li><a href="/admin/users">Users</a></li>
+            <li><a href="/admin/matches">Matches</a></li>
+        </ul>
+            
+        @content
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutReady"
+            android:layout_width="match_parent"
+            android:animateLayoutChanges="true"
+            android:layout_height="215dp"
+            android:background="@color/mainRibbon"
+            android:orientation="vertical">
+
+
+
+            <ViewSwitcher
+                android:id="@+id/switcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:inAnimation="@anim/fade_in"
+                android:outAnimation="@anim/fade_out"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btReady"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_coeur"
+                        android:contentDescription="@string/big_heart"
+                        android:layout_marginTop="45dp"
+                        android:adjustViewBounds="true"
+                        android:layout_height="100dp" />
+
+                    <Button
+                        android:id="@+id/txtReady"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+
+                        android:background="@drawable/rounded_white_button"
+                        android:gravity="center"
+                        android:text="@string/ready"
+                        android:textColor="@color/white"
+                        android:theme="@style/btRoundWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="20dp" />
+                </LinearLayout>
+
+
+                <fragment
+                    android:id="@+id/pendingFragment"
+                    android:name="ch.epfl.sweng.project.fragments.PendingFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </ViewSwitcher>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

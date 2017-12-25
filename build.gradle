@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'org.jacoco:org.jacoco.core:0.7.7.201606060606'
+        classpath 'com.google.gms:google-services:3.0.0'
+
+
+        // Don't place your app dependencies here, but in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

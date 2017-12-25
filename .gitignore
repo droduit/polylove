@@ -1,0 +1,28 @@
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Vim files
+.*.sw?
+
+# Android Studio
+*.iml
+local.properties
+.idea
+.idea_modules
+
+# Eclipse
+.classpath
+.project
+.settings
+
+# Gradle
+.gradle
+build
+
+# Server
+logs
+target
+RUNNING_PID

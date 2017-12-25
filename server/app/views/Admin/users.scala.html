@@ -1,0 +1,39 @@
+@import sorm.Persisted
+@(users: Stream[User with Persisted])(implicit flash: Flash)
+
+@main {
+    <h2>List of our users</h2>
+
+    <form method="post" action="/admin/users">
+        <input name="firstname" placeholder="firstname" />
+        <input name="lastname" placeholder="lastname" />
+        <input name="email" placeholder="email" />
+        <input name="firebaseId" placeholder="firebaseId" />
+        <input type="submit" value="Add user" />
+    </form>
+
+    <hr />
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Firebase IDs</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(user <- users) {
+            <tr>
+                <td>@user.id</td>
+                <td>@user.firstname</td>
+                <td>@user.lastname</td>
+                <td>@user.email</td>
+                <td>@user.firebaseIds.mkString(" || ")</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}

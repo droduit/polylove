@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "622623358047",
+    "firebase_url": "https://roduit-com-api-project-622623358047.firebaseio.com",
+    "project_id": "roduit.com:api-project-622623358047",
+    "storage_bucket": "roduit.com:api-project-622623358047.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622623358047:android:3d283d7b9bf3b490",
+        "android_client_info": {
+          "package_name": "ch.epfl.sweng.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622623358047-8kkincubb9l0mtlsqrdm6kt5jpm4jdrd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6KI03WrQnJgJNhWRJ2FV7sKL8vXEOJX8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

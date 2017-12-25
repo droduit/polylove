@@ -1,0 +1,82 @@
+@import sorm.Persisted
+@(matches: Stream[Match with Persisted], users: Stream[User with Persisted])(implicit flash: Flash)
+
+@main {
+    <h2>List of matches</h2>
+
+    <form method="post" action="/admin/matches">
+        <select name="user1">
+            @for(user <- users) {
+            <option value="@user.id">@user.firstname @user.lastname</option>
+            }
+        </select>
+        <select name="user2">
+            @for(user <- users) {
+            <option value="@user.id">@user.firstname @user.lastname</option>
+            }
+        </select>
+        <input type="submit" value="Add match" />
+    </form>
+
+    <hr />
+
+    <form method="post" action="/admin/matches/open">
+        <input type="radio" name="strategy" value="Bloom">Blossom</input>
+        <input type="radio" name="strategy" value="Random">Random</input>
+
+        <input type="submit" value="Open matches" />
+    </form>
+
+    <hr />
+
+    <form method="post" action="/admin/matches/close">
+        <input type="radio" name="action" value="Normal">Normal</input>
+        <input type="radio" name="action" value="Love">Love</input>
+        <input type="radio" name="action" value="Hate">Hate</input>
+
+        <input type="submit" value="Close pending matches" />
+    </form>
+
+    <hr />
+
+    <a href="/admin/matches/reveal">Reveal informations</a>
+
+    <hr />
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User1</th>
+                <th>Interested</th>
+                <th>User2</th>
+                <th>Interested</th>
+                <th>State</th>
+                <th>Send message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(_match <- matches) {
+            <tr>
+                <td>@_match.id</td>
+                <td>@_match.user1.firstname @_match.user1.lastname</td>
+                <td>@_match.user1Interested</td>
+                <td>@_match.user2.firstname @_match.user2.lastname</td>
+                <td>@_match.user2Interested</td>
+                <td>@_match.state</td>
+                <td>
+                    <form method="post" action="/admin/messages">
+                        <input type="hidden" name="matchId" value="@_match.id" />
+                        <select name="senderId">
+                            <option value="@_match.user1.asInstanceOf[User with Persisted].id">@_match.user1.firstname @_match.user1.lastname</option>
+                            <option value="@_match.user2.asInstanceOf[User with Persisted].id">@_match.user2.firstname @_match.user2.lastname</option>
+                        </select>
+                        <input name="content" placeholder="message content" />
+                        <input type="submit" />
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}

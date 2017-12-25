@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_view_profile"
+        android:title="@string/view_profile"/>
+
+</menu>

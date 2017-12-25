@@ -1,0 +1,21 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:background="#A5000000"
+    android:animateLayoutChanges="true"
+    android:id="@+id/ltDisconnected"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="top"
+    android:gravity="top"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:visibility="gone">
+
+    <TextView
+        android:text="@string/network_unavailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDisconnected"
+        android:padding="14dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
