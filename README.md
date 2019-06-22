@@ -3,7 +3,7 @@ PolyLove is a "dating" app to help EPFL and UNIL students meet! Our spirit is qu
 
 # Screenshots
 
-<img src="http://dominique.leroduit.com/polylove/0.jpg" width="280px"> <img src="http://dominique.leroduit.com/polylove/1.jpg" width="280px"> <img src="http://dominique.leroduit.com/polylove/2.jpg" width="285px"> <img src="http://dominique.leroduit.com/polylove/3.jpg" width="280px"> <img src="http://dominique.leroduit.com/polylove/4.jpg" width="284px">
+<img src="https://dominique.leroduit.com/external/assets/img/polylove/0.jpg" width="280px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/1.jpg" width="280px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/2.jpg" width="285px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/3.jpg" width="280px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/4.jpg" width="284px">
 
 # Contributors
 - Dominique Roduit
