@@ -1,6 +1,11 @@
 # Description
 PolyLove is a "dating" app to help EPFL and UNIL students meet! Our spirit is quality over quantity: once a day, the app matches two students and opens an anonymous chat to allow them discussing. Over the day, additional secrets about both love seekers will be slowly revealed. At the end of the day, if they like each other, their identities will be revealed, unless they prefer to try again with someone else the next day...  Will you build a relationship that stands the test of time ? 
 
+# Technologies
+- The client is a fully android-native app written in Java
+- The server was written in Scala with the help of the Play framework
+- Firebase is used to send notifications
+
 # Screenshots
 
 <img src="https://dominique.leroduit.com/external/assets/img/polylove/0.jpg" width="280px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/1.jpg" width="280px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/2.jpg" width="285px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/3.jpg" width="280px"><img src="https://dominique.leroduit.com/external/assets/img/polylove/4.jpg" width="284px">
